@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Pi - Comprehensive Drug Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-pills"></i>
+                    <span>Med Pi</span>
+                </a>
+                
+                <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#drugs"><i class="fas fa-capsules"></i> Drugs A-Z</a></li>
+                        <li><a href="#interactions"><i class="fas fa-exclamation-triangle"></i> Interactions</a></li>
+                        <li><a href="#dosage"><i class="fas fa-file-medical"></i> Dosage Guide</a></li>
+                        <li><a href="#health"><i class="fas fa-heartbeat"></i> Health Tips</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Find Drug Information Instantly</h1>
+            <p class="subtitle">Search by name, browse alphabetically, or explore drug classes with Med Pi - your trusted pharmaceutical companion</p>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search for a drug (e.g. Amoxicillin, Ibuprofen, Metformin)">
+                    <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+            
+            <div class="alphabet-nav">
+                <a href="#drugs-a" class="active">A</a>
+                <a href="#drugs-b">B</a>
+                <a href="#drugs-c">C</a>
+                <a href="#drugs-d">D</a>
+                <a href="#drugs-e">E</a>
+                <a href="#drugs-f">F</a>
+                <a href="#drugs-g">G</a>
+                <a href="#drugs-h">H</a>
+                <a href="#drugs-i">I</a>
+                <a href="#drugs-j">J</a>
+                <a href="#drugs-k">K</a>
+                <a href="#drugs-l">L</a>
+                <a href="#drugs-m">M</a>
+                <a href="#drugs-n">N</a>
+                <a href="#drugs-o">O</a>
+                <a href="#drugs-p">P</a>
+                <a href="#drugs-q">Q</a>
+                <a href="#drugs-r">R</a>
+                <a href="#drugs-s">S</a>
+                <a href="#drugs-t">T</a>
+                <a href="#drugs-u">U</a>
+                <a href="#drugs-v">V</a>
+                <a href="#drugs-w">W</a>
+                <a href="#drugs-x">X</a>
+                <a href="#drugs-y">Y</a>
+                <a href="#drugs-z">Z</a>
+            </div>
+        </section>
+        
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            <strong><i class="fas fa-exclamation-circle"></i> Important:</strong> This information is for educational purposes only and does not constitute medical advice. Always consult your healthcare provider before starting or changing any medication.
+        </div>
+        
+        <!-- Page Content -->
+        <div class="tab-container">
+            <div class="tabs">
+                <div class="tab active" data-tab="home">Home</div>
+                <div class="tab" data-tab="drugs">Drugs A-Z</div>
+                <div class="tab" data-tab="interactions">Interactions</div>
+                <div class="tab" data-tab="dosage">Dosage Guide</div>
+                <div class="tab" data-tab="health">Health Tips</div>
+                <div class="tab" data-tab="about">About</div>
+            </div>
+            
+            <!-- Home Tab -->
+            <div class="tab-content active" id="home-tab">
+                <section>
+                    <h2 class="section-title">Featured Drugs</h2>
+                    
+                    <div class="drug-grid">
+                        <!-- Drug Cards will be dynamically added -->
+                    </div>
+                </section>
+                
+                <!-- Features Section -->
+                <section>
+                    <h2 class="section-title">Why Choose Med Pi?</h2>
+                    
+                    <div class="features">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3 class="feature-title">Intelligent Search</h3>
+                            <p class="feature-text">Find drugs instantly with our AI-powered search that understands misspellings and provides smart suggestions.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="feature-title">Comprehensive Database</h3>
+                            <p class="feature-text">Access detailed information on over 20,000 medications with data from FDA, EMA, and global sources.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h3 class="feature-title">Interaction Alerts</h3>
+                            <p class="feature-text">Identify potentially dangerous drug-drug and drug-food interactions with our advanced checker.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3 class="feature-title">Mobile Experience</h3>
+                            <p class="feature-text">Access drug information anywhere with our fully responsive design that works on all devices.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3 class="feature-title">Professional Tools</h3>
+                            <p class="feature-text">Specialized features for healthcare providers including dosage calculators and prescribing guidelines.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h3 class="feature-title">Safety Alerts</h3>
+                            <p class="feature-text">Get real-time notifications about drug recalls, shortages and important safety updates.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Drugs A-Z Tab -->
+            <div class="tab-content" id="drugs-tab">
+                <section id="drugs">
+                    <h2 class="section-title">Drugs A-Z</h2>
+                    
+                    <div id="drugs-list-container">
+                        <!-- Drug list will be dynamically added -->
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Interactions Tab -->
+            <div class="tab-content" id="interactions-tab">
+                <section id="interactions">
+                    <h2 class="section-title">Drug Interactions Checker</h2>
+                    
+                    <div class="page-content">
+                        <p>Enter two or more medications to check for potential interactions. Our comprehensive database will identify potentially dangerous combinations.</p>
+                        
+                        <div class="search-container interaction-search">
+                            <div class="search-box">
+                                <input type="text" placeholder="Enter first drug name">
+                                <button><i class="fas fa-plus"></i> Add</button>
+                            </div>
+                        </div>
+                        
+                        <div id="interaction-tags" class="interaction-tags-container">
+                            <div class="interaction-tag">Amoxicillin <i class="fas fa-times"></i></div>
+                            <div class="interaction-tag">Warfarin <i class="fas fa-times"></i></div>
+                        </div>
+                        
+                        <button class="btn btn-primary interaction-check-btn">
+                            <i class="fas fa-handshake"></i> Check Interactions
+                        </button>
+                        
+                        <div class="interaction-result">
+                            <div class="interaction-level interaction-high">High Risk Interaction</div>
+                            <h3>Amoxicillin and Warfarin</h3>
+                            <p>Amoxicillin may increase the anticoagulant activities of Warfarin. This interaction may increase the risk of bleeding complications.</p>
+                            <p><strong>Recommendation:</strong> Monitor for signs of bleeding and adjust warfarin dosage as needed. Consider alternative antibiotics if possible.</p>
+                        </div>
+                        
+                        <h3 class="interaction-subtitle">Common Dangerous Interactions</h3>
+                        
+                        <div class="drug-grid">
+                            <div class="interaction-result">
+                                <div class="interaction-level interaction-high">High Risk</div>
+                                <h3>Warfarin + NSAIDs</h3>
+                                <p>Increased risk of bleeding and bruising</p>
+                            </div>
+                            
+                            <div class="interaction-result">
+                                <div class="interaction-level interaction-high">High Risk</div>
+                                <h3>MAOIs + SSRIs</h3>
+                                <p>Risk of serotonin syndrome</p>
+                            </div>
+                            
+                            <div class="interaction-result">
+                                <div class="interaction-level interaction-medium">Medium Risk</div>
+                                <h3>Statins + Grapefruit</h3>
+                                <p>Increased risk of muscle damage</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Dosage Guide Tab -->
+            <div class="tab-content" id="dosage-tab">
+                <section id="dosage">
+                    <h2 class="section-title">Dosage Guides</h2>
+                    
+                    <div class="page-content">
+                        <p>Find appropriate medication dosages based on age, weight, and medical condition. Always consult with a healthcare professional before administering medication.</p>
+                        
+                        <div class="search-container dosage-search">
+                            <div class="search-box">
+                                <input type="text" placeholder="Search for a drug">
+                                <button><i class="fas fa-search"></i> Search</button>
+                            </div>
+                        </div>
+                        
+                        <div id="dosage-guides-container">
+                            <!-- Dosage guides will be dynamically added -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Health Tips Tab -->
+            <div class="tab-content" id="health-tab">
+                <section id="health">
+                    <h2 class="section-title">Health & Wellness Tips</h2>
+                    
+                    <div class="page-content" id="health-tips-container">
+                        <!-- Health tips will be dynamically added -->
+                    </div>
+                </section>
+            </div>
+            
+            <!-- About Tab -->
+            <div class="tab-content" id="about-tab">
+                <section id="about">
+                    <h2 class="section-title">About Med Pi</h2>
+                    
+                    <div class="page-content">
+                        <div class="about-content">
+                            <div class="about-text">
+                                <p>Med Pi is a comprehensive drug information platform designed to provide accurate, up-to-date medication information to both healthcare professionals and the general public.</p>
+                                <p>Our mission is to improve medication safety and health outcomes by making reliable drug information accessible to everyone.</p>
+                                <p>Founded in 2023 by a team of pharmacists and software engineers, Med Pi combines medical expertise with cutting-edge technology to deliver the most comprehensive drug database available.</p>
+                                <p>All our information is reviewed by licensed pharmacists and updated regularly to reflect the latest FDA approvals, safety alerts, and clinical research.</p>
+                            </div>
+                            <div class="about-image">
+                                <i class="fas fa-pills"></i>
+                            </div>
+                        </div>
+                        
+                        <h3 class="team-title">Our Team</h3>
+                        
+                        <div class="team-grid">
+                            <div class="team-member">
+                                <div class="member-image">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <div class="member-info">
+                                    <h3>Dr. Sarah Johnson</h3>
+                                    <div class="member-role">Chief Pharmacist</div>
+                                    <p>15+ years of clinical pharmacy experience</p>
+                                </div>
+                            </div>
+                            
+                            <div class="team-member">
+                                <div class="member-image">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="member-info">
+                                    <h3>Michael Chen</h3>
+                                    <div class="member-role">Lead Developer</div>
+                                    <p>Health tech specialist with 10 years experience</p>
+                                </div>
+                            </div>
+                            
+                            <div class="team-member">
+                                <div class="member-image">
+                                    <i class="fas fa-book-medical"></i>
+                                </div>
+                                <div class="member-info">
+                                    <h3>Dr. James Wilson</h3>
+                                    <div class="member-role">Medical Director</div>
+                                    <p>Board-certified internal medicine specialist</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="data-title">Our Data Sources</h3>
+                        <ul class="data-sources">
+                            <li>FDA Drug Approvals and Safety Communications</li>
+                            <li>EMA (European Medicines Agency) Database</li>
+                            <li>Clinical Pharmacological Databases</li>
+                            <li>Peer-reviewed Medical Journals</li>
+                            <li>Drug Manufacturer Information</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Drug Detail Modal -->
+    <div class="drug-detail-modal" id="drugDetailModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Med Pi</h3>
+                    <p>Your trusted source for comprehensive drug information, safety alerts, and medication management tools.</p>
+                    <p>FDA-approved data sources with daily updates.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-capsules"></i> Drugs A-Z</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i> Pill Identifier</a></li>
+                        <li><a href="#"><i class="fas fa-handshake"></i> Interaction Checker</a></li>
+                        <li><a href="#"><i class="fas fa-calculator"></i> Dosage Calculator</a></li>
+                        <li><a href="#"><i class="fas fa-bell"></i> FDA Recalls</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-database"></i> Data Sources</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Editorial Policy</a></li>
+                        <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms of Use</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-envelope"></i> support@medpi.com</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> +1 (800) MED-INFO</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> @MedPiApp</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> MedPiOfficial</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> medpi_app</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Med Pi. All rights reserved. The content on this site is for informational purposes only and is not a substitute for professional medical advice.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
